@@ -53,13 +53,20 @@ def main():
     data.qpos[7:] = 0.0
 
     # Initialize trapdoor height
+    trapdoor_target_z = 0.1
     if mocap_id != -1:
-        data.mocap_pos[mocap_id][2] = 0.1
+        data.mocap_pos[mocap_id][2] = trapdoor_target_z
     
     with mujoco.viewer.launch_passive(model, data) as viewer:
         start_time = time.time()
+        hand_closed = False
         
         while viewer.is_running() and cap.isOpened():
+            if mocap_id != -1:
+                current_z = data.mocap_pos[mocap_id][2]
+                if current_z > trapdoor_target_z:
+                    data.mocap_pos[mocap_id][2] = max(trapdoor_target_z, current_z - 0.02)
+                    
             # Step physics to match real wall-clock time
             time_since_start = time.time() - start_time
             while data.time < time_since_start:
@@ -79,7 +86,23 @@ def main():
             
             results = landmarker.detect(mp_image)
             
-            if results.hand_landmarks:
+            if hand_closed:
+                for i, act_idx in enumerate(actuator_ids):
+                    if act_idx != -1:
+                        ctrl_min = model.actuator_ctrlrange[act_idx][0]
+                        ctrl_max = model.actuator_ctrlrange[act_idx][1]
+                        name = actuator_names[i]
+                        
+                        rad_val = data.ctrl[act_idx] # default to current
+                        if "wrist" not in name and ("pitch" in name or "knuckle" in name or "tip" in name):
+                            rad_val = ctrl_max
+                        elif "wrist" not in name and ("yaw" in name or "roll" in name):
+                            rad_val = 0.0
+                            
+                        clamped_val = np.clip(rad_val, ctrl_min, ctrl_max)
+                        alpha = 0.3
+                        data.ctrl[act_idx] = (alpha * clamped_val) + ((1 - alpha) * data.ctrl[act_idx])
+            elif results.hand_landmarks:
                 for hand_landmarks in results.hand_landmarks:
                     # Draw points on the hand so the user can see tracking is working
                     for lm in hand_landmarks:
@@ -109,7 +132,7 @@ def main():
                             # Clamp value
                             clamped_val = np.clip(rad_val, ctrl_min, ctrl_max)
                             
-                            # Apply smooth filter to reduce jitter (increased to 0.3 for faster finger response)
+                            # Apply smooth filter to reduce jitter
                             alpha = 0.3
                             data.ctrl[act_idx] = (alpha * clamped_val) + ((1 - alpha) * data.ctrl[act_idx])
 
@@ -122,13 +145,16 @@ def main():
             key = cv2.waitKey(1) & 0xFF
             if key == 27 or key == ord('q'): # ESC or Q to quit
                 break
+            elif key == ord('c'):
+                hand_closed = not hand_closed
+                print(f"Mão fechada: {hand_closed}")
             elif key == ord('d'): # D to Drop
-                print("Derrubando o chão!")
-                if mocap_id != -1:
-                    data.mocap_pos[mocap_id][2] = -5.0 # Drop floor 5 meters down
+                print("Derrubando o chão lentamente!")
+                trapdoor_target_z = -5.0
             elif key == ord('r'): # R to Reset
                 print("Resetando a física...")
                 mujoco.mj_resetData(model, data)
+                trapdoor_target_z = 0.1
                 if mocap_id != -1:
                     data.mocap_pos[mocap_id][2] = 0.1
                 data.qpos[0:3] = [0.0, 0.0, 0.20]
