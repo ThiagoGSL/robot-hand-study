@@ -1,0 +1,21 @@
+<mujoco>
+  <option gravity="0 0 -9.81" timestep="0.001"/>
+  <compiler autolimits="true" boundmass="0.01" boundinertia="1e-5" meshdir="../"/>
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" directional="true"/>
+    <geom type="plane" size="1 1 0.1" rgba="0.9 0.9 0.9 1" contype="0" conaffinity="1"/>
+    
+    <!-- World Coordinate Frame (X=Red, Y=Green, Z=Blue) -->
+    <geom type="cylinder" fromto="0 0 0  0.2 0 0" size="0.005" rgba="1 0 0 1" contype="0" conaffinity="0"/>
+    <geom type="cylinder" fromto="0 0 0  0 0.2 0" size="0.005" rgba="0 1 0 1" contype="0" conaffinity="0"/>
+    <geom type="cylinder" fromto="0 0 0  0 0 0.2" size="0.005" rgba="0 0 1 1" contype="0" conaffinity="0"/>
+    
+    <!-- Fixed horizontal bar (using fromto to guarantee it's perfectly horizontal) -->
+    <body name="bar">
+      <!-- fromto="x1 y1 z1  x2 y2 z2", size="radius" -->
+      <geom type="cylinder" fromto="0.04 -0.15 0.35  0.04 0.15 0.35" size="0.03" rgba="0.8 0.2 0.2 1" contype="0" conaffinity="1"/>
+    </body>
+  </worldbody>
+  
+  <include file="../dexhand-right.xml"/>
+</mujoco>

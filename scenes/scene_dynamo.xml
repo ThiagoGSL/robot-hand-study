@@ -1,0 +1,35 @@
+<mujoco>
+  <option gravity="0 0 -9.81" timestep="0.001"/>
+  <compiler autolimits="true" boundmass="0.01" boundinertia="1e-5" meshdir="../"/>
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" directional="true"/>
+    
+    <!-- Table -->
+    <geom name="table" type="box" pos="0 0 0.1" size="0.5 0.5 0.1" rgba="0.6 0.4 0.2 1" contype="1" conaffinity="1"/>
+    
+    <!-- World Coordinate Frame (X=Red, Y=Green, Z=Blue) -->
+    <geom type="cylinder" fromto="0 0 0.1  0.1 0 0.1" size="0.0025" rgba="1 0 0 1" contype="0" conaffinity="0"/>
+    <geom type="cylinder" fromto="0 0 0.1  0 0.1 0.1" size="0.0025" rgba="0 1 0 1" contype="0" conaffinity="0"/>
+    <geom type="cylinder" fromto="0 0 0.1  0 0 0.2" size="0.0025" rgba="0 0 1 1" contype="0" conaffinity="0"/>
+    
+    <!-- Dynamometer -->
+    <body name="dynamo_base" pos="0.0 0.05 0.3">
+      <!-- Fixed bar -->
+      <geom type="cylinder" fromto="0 0 -0.1  0 0 0.1" size="0.015" rgba="0.8 0.2 0.2 1" contype="1" conaffinity="1"/>
+      
+      <!-- Sliding bar -->
+      <body name="dynamo_slider" pos="0 0.06 0">
+        <!-- Slide joint along Y axis. range allows moving from -0.05 to 0. stiffness is spring constant. -->
+        <joint name="dyn_joint" type="slide" axis="0 1 0" range="-0.05 0" stiffness="100" springref="0" damping="5"/>
+        <geom type="cylinder" fromto="0 0 -0.1  0 0 0.1" size="0.015" rgba="0.2 0.2 0.8 1" contype="1" conaffinity="1"/>
+      </body>
+    </body>
+  </worldbody>
+  
+  <sensor>
+    <!-- Measures the position of the slider joint -->
+    <jointpos name="dyn_pos" joint="dyn_joint"/>
+  </sensor>
+  
+  <include file="../dexhand-right.xml"/>
+</mujoco>

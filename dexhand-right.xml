@@ -1,0 +1,141 @@
+<mujoco model="dexhand-right">
+  <compiler angle="radian" />
+
+  <asset>
+    <mesh name="base_link" content_type="model/stl" file="./dexhand_description/meshes/right/base_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="forearm_1" content_type="model/stl" file="./dexhand_description/meshes/right/forearm_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="wrist_lower_1" content_type="model/stl" file="./dexhand_description/meshes/right/wrist_lower_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="wrist_upper_1" content_type="model/stl" file="./dexhand_description/meshes/right/wrist_upper_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_cmc_b_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_cmc_b_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_cmc_a_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_cmc_a_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="hand-cover_1" content_type="model/stl" file="./dexhand_description/meshes/right/hand-cover_1.stl" scale="0.001 0.001 0.001" />
+  </asset>
+
+  <worldbody>
+    <body name="hand_root" pos="0 0 0.001" euler="0 0 0"><freejoint /><geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="base_link" />
+    <geom type="mesh" rgba="0.7 0.7 0.7 1" mesh="forearm_1" />
+    <body name="wrist_lower_1" pos="-0.012 -0.0217 0.203">
+      <joint name="wrist_pitch_lower" range="-0.523599 0.523599" actuatorfrcrange="-100 100" axis="0 -1 0" />
+      <geom pos="0.012 0.0217 -0.203" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="wrist_lower_1" />
+      <body name="wrist_upper_1" pos="-0.01198 0.021 0.029">
+        <joint name="wrist_yaw" range="-0.436332 0.436332" actuatorfrcrange="-100 100" axis="-1 0 0" />
+        <geom pos="0.02398 0.0007 -0.232" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="wrist_upper_1" />
+        <body name="index_bulk_1" pos="0.012 0.021 0.023266">
+          <joint name="wrist_pitch_upper" range="-0.349066 0.349066" actuatorfrcrange="-100 100" axis="0 -1 0" />
+          <geom pos="0.01198 -0.0203 -0.255266" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="index_bulk_1" />
+          <geom pos="0.01198 -0.0203 -0.255266" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="middle_bulk_1" />
+          <geom pos="0.01198 -0.0203 -0.255266" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="ring_bulk_1" />
+          <geom pos="0.01198 -0.0203 -0.255266" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="pinky_bulk_1" />
+          <geom pos="0.01198 -0.0203 -0.255266" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="hand-cover_1" />
+          <body name="ring_knuckle_1" pos="-0.002001 -0.038638 0.087079">
+            <joint name="ring_yaw" range="-0.349066 0.349066" actuatorfrcrange="-100 100" axis="-0.996234 -0.086694 -0.001008" />
+            <geom pos="0.013981 0.018338 -0.342345" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="ring_knuckle_1" />
+            <body name="ring_plp_1" pos="0.007067 0.008125 0.004909">
+              <joint name="ring_pitch" range="0 0.785398" actuatorfrcrange="-100 100" axis="-0.086225 0.989495 0.116038" />
+              <geom pos="0.006914 0.010213 -0.347254" type="mesh" rgba="0.7 0.7 0.7 1" mesh="ring_plp_1" />
+              <body name="ring_mlp_1" pos="-0.003379 -0.007829 0.044426">
+                <joint name="ring_knuckle" range="0 0.785398" actuatorfrcrange="-100 100" axis="-0.086225 0.989495 0.116038" />
+                <geom pos="0.010293 0.018042 -0.39168" type="mesh" rgba="0.7 0.7 0.7 1" mesh="ring_mlp_1" />
+                <body name="ring_tip_1" pos="0.000272 -0.003471 0.029797">
+                  <joint name="ring_tip" range="0 0.785398" actuatorfrcrange="-100 100" axis="-0.086225 0.989495 0.116038" />
+                  <geom pos="0.010021 0.021513 -0.421477" type="mesh" rgba="0.7 0.7 0.7 1" mesh="ring_tip_1" />
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="pinky_knuckle_1" pos="-0.001436 -0.059288 0.078763">
+            <joint name="pinky_yaw" range="-0.349066 0.349066" actuatorfrcrange="-100 100" axis="-0.980669 -0.194947 -0.016825" />
+            <geom pos="0.013416 0.038988 -0.334029" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="pinky_knuckle_1" />
+            <body name="pinky_plp_1" pos="0.006112 0.008539 0.005458">
+              <joint name="pinky_pitch" range="0 0.785398" actuatorfrcrange="-100 100" axis="-0.194878 0.965338 0.173624" />
+              <geom pos="0.007304 0.030449 -0.339487" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="pinky_plp_1" />
+              <body name="pinky_mlp_1" pos="-0.002512 -0.010584 0.039323">
+                <joint name="pinky_knuckle" range="0 0.785398" actuatorfrcrange="-100 100" axis="-0.194878 0.965338 0.173624" />
+                <geom pos="0.009816 0.041033 -0.37881" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="pinky_mlp_1" />
+                <body name="pinky_tip_1" pos="0.000475 -0.004685 0.026586">
+                  <joint name="pinky_tip" range="0 0.785398" actuatorfrcrange="-100 100" axis="-0.194878 0.965338 0.173624" />
+                  <geom pos="0.009341 0.045718 -0.405396" type="mesh" rgba="0.7 0.7 0.7 1" mesh="pinky_tip_1" />
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="middle_knuckle_1" pos="-0.002866 -0.014 0.091">
+            <joint name="middle_yaw" range="-0.349066 0.349066" actuatorfrcrange="-100 100" axis="-1 0 0" />
+            <geom pos="0.014846 -0.0063 -0.346266" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="middle_knuckle_1" />
+            <body name="middle_plp_1" pos="0.00775 0.008 0.004">
+              <joint name="middle_pitch" range="0 0.785398" actuatorfrcrange="-100 100" axis="0 1 0" />
+              <geom pos="0.007096 -0.0143 -0.350266" type="mesh" rgba="0.7 0.7 0.7 1" mesh="middle_plp_1" />
+              <body name="middle_mlp_1" pos="-0.004 -0.002 0.04725">
+                <joint name="middle_knuckle" range="0 0.785398" actuatorfrcrange="-100 100" axis="0 1 0" />
+                <geom pos="0.011096 -0.0123 -0.397516" type="mesh" rgba="0.7 0.7 0.7 1" mesh="middle_mlp_1" />
+                <body name="middle_tip_1" pos="0 0 0.0315">
+                  <joint name="middle_tip" range="0 0.785398" actuatorfrcrange="-100 100" axis="0 1 0" />
+                  <geom pos="0.011096 -0.0123 -0.429016" type="mesh" rgba="0.7 0.7 0.7 1" mesh="middle_tip_1" />
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="thumb_cmc_b_1" pos="0.026917 -0.00151 0.012735">
+            <joint name="thumb_yaw" range="0 0.872665" actuatorfrcrange="-100 100" axis="0.353553 0.612372 -0.707107" />
+            <geom pos="-0.014937 -0.01879 -0.268001" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="thumb_cmc_b_1" />
+            <body name="thumb_cmc_a_1" pos="0.002822 0.004903 -0.009193">
+              <joint name="thumb_roll" range="0 0.349066" actuatorfrcrange="-100 100" axis="-0.35613 -0.610881 -0.707104" />
+              <geom pos="-0.017759 -0.023693 -0.258808" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="thumb_cmc_a_1" />
+              <body name="thumb_plp_1" pos="0.010924 0.002655 0.007762">
+                <joint name="thumb_pitch" range="0 1.0472" actuatorfrcrange="-100 100" axis="0.864969 -0.501821 -0.002105" />
+                <geom pos="-0.028683 -0.026348 -0.26657" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="thumb_plp_1" />
+                <body name="thumb_mlp_1" pos="0.020792 0.040256 0.039602">
+                  <joint name="thumb_knuckle" range="0 0.785398" actuatorfrcrange="-100 100" axis="0.864969 -0.501821 -0.002105" />
+                  <geom pos="-0.049475 -0.066604 -0.306172" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="thumb_mlp_1" />
+                  <body name="thumb_tip_1" pos="0.014837 0.025461 0.027049">
+                    <joint name="thumb_tip" range="0 0.785398" actuatorfrcrange="-100 100" axis="0.864969 -0.501821 -0.002105" />
+                    <geom pos="-0.064312 -0.092065 -0.333221" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="thumb_tip_1" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+          <body name="index_knuckle_1" pos="-0.003905 0.009839 0.084891">
+            <joint name="index_yaw" range="-0.349066 0.349066" actuatorfrcrange="-100 100" axis="-0.99606 0.086969 -0.017358" />
+            <geom pos="0.015885 -0.030139 -0.340157" quat="1 0 0 0" type="mesh" rgba="0.7 0.7 0.7 1" mesh="index_knuckle_1" />
+            <body name="index_plp_1" pos="0.008616 0.007539 0.003571">
+              <joint name="index_pitch" range="0 0.785398" actuatorfrcrange="-100 100" axis="0.087977 0.993678 -0.069746" />
+              <geom pos="0.007269 -0.037678 -0.343728" type="mesh" rgba="0.7 0.7 0.7 1" mesh="index_plp_1" />
+              <body name="index_mlp_1" pos="-0.00469 0.001257 0.044974">
+                <joint name="index_knuckle" range="0 0.785398" actuatorfrcrange="-100 100" axis="0.087977 0.993678 -0.069746" />
+                <geom pos="0.011959 -0.038935 -0.388702" type="mesh" rgba="0.7 0.7 0.7 1" mesh="index_mlp_1" />
+                <body name="index_tip_1" pos="-0.001368 0.002219 0.029887">
+                  <joint name="index_tip" range="0 0.785398" actuatorfrcrange="-100 100" axis="0.087977 0.993678 -0.069746" />
+                  <geom pos="0.013327 -0.041154 -0.418589" type="mesh" rgba="0.7 0.7 0.7 1" mesh="index_tip_1" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </body></worldbody>
+<actuator><position name="act_wrist_pitch_lower" joint="wrist_pitch_lower" kp="0.5" kv="0.05" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.523599 0.523599" /><position name="act_wrist_yaw" joint="wrist_yaw" kp="0.5" kv="0.05" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.436332 0.436332" /><position name="act_wrist_pitch_upper" joint="wrist_pitch_upper" kp="0.5" kv="0.05" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.349066 0.349066" /><position name="act_ring_yaw" joint="ring_yaw" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.349066 0.349066" /><position name="act_ring_pitch" joint="ring_pitch" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_ring_knuckle" joint="ring_knuckle" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_ring_tip" joint="ring_tip" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_pinky_yaw" joint="pinky_yaw" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.349066 0.349066" /><position name="act_pinky_pitch" joint="pinky_pitch" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_pinky_knuckle" joint="pinky_knuckle" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_pinky_tip" joint="pinky_tip" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_middle_yaw" joint="middle_yaw" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.349066 0.349066" /><position name="act_middle_pitch" joint="middle_pitch" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_middle_knuckle" joint="middle_knuckle" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_middle_tip" joint="middle_tip" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_thumb_yaw" joint="thumb_yaw" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.872665" /><position name="act_thumb_roll" joint="thumb_roll" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.349066" /><position name="act_thumb_pitch" joint="thumb_pitch" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 1.0472" /><position name="act_thumb_knuckle" joint="thumb_knuckle" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_thumb_tip" joint="thumb_tip" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_index_yaw" joint="index_yaw" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="-0.349066 0.349066" /><position name="act_index_pitch" joint="index_pitch" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_index_knuckle" joint="index_knuckle" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /><position name="act_index_tip" joint="index_tip" kp="0.06" kv="0.006" forcelimited="true" forcerange="-1.5 1.5" ctrllimited="true" ctrlrange="0 0.785398" /></actuator></mujoco>

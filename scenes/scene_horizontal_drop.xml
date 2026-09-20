@@ -1,0 +1,30 @@
+<mujoco>
+  <option gravity="0 0 -9.81" timestep="0.001"/>
+  <compiler autolimits="true" boundmass="0.01" boundinertia="1e-5" meshdir="../"/>
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" directional="true"/>
+    
+
+    <!-- World Coordinate Frame -->
+    <geom type="cylinder" fromto="0 0 0.2  0.2 0 0.2" size="0.005" rgba="1 0 0 1" contype="0" conaffinity="0"/>
+    <geom type="cylinder" fromto="0 0 0.2  0 0.2 0.2" size="0.005" rgba="0 1 0 1" contype="0" conaffinity="0"/>
+    <geom type="cylinder" fromto="0 0 0.2  0 0 0.4" size="0.005" rgba="0 0 1 1" contype="0" conaffinity="0"/>
+    
+    <!-- 200g Heavy Bar (Horizontal along X axis) -->
+    <body name="heavy_bar" pos="0.04 0.05 0.3">
+        <freejoint/>
+        <!-- mass="0.2" kg = 200g -->
+        <geom type="cylinder" fromto="-0.15 0 0  0.15 0 0" size="0.027" mass="0.2" rgba="0.2 0.8 0.2 1" contype="1" conaffinity="1"/>
+    </body>
+    
+    <!-- Supports for the Heavy Bar (Mocap body to instantly move it via python) -->
+    <body name="supports" mocap="true" pos="0.04 0.05 0.27">
+        <!-- Left support -->
+        <geom type="box" pos="-0.12 0 0" size="0.03 0.02 0.01" rgba="0.8 0.2 0.2 1" contype="1" conaffinity="1"/>
+        <!-- Right support -->
+        <geom type="box" pos="0.12 0 0" size="0.03 0.02 0.01" rgba="0.8 0.2 0.2 1" contype="1" conaffinity="1"/>
+    </body>
+  </worldbody>
+  
+  <include file="../dexhand-right.xml"/>
+</mujoco>
