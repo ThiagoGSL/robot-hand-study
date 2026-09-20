@@ -2,36 +2,36 @@
   <compiler angle="radian" />
 
   <asset>
-    <mesh name="base_link" content_type="model/stl" file="./dexhand_description/meshes/right/base_link.stl" scale="0.001 0.001 0.001" />
-    <mesh name="forearm_1" content_type="model/stl" file="./dexhand_description/meshes/right/forearm_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="wrist_lower_1" content_type="model/stl" file="./dexhand_description/meshes/right/wrist_lower_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="wrist_upper_1" content_type="model/stl" file="./dexhand_description/meshes/right/wrist_upper_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="index_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_bulk_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="middle_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_bulk_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="ring_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_bulk_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="index_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_knuckle_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="middle_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_knuckle_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="ring_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_knuckle_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="pinky_knuckle_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_knuckle_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="index_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_plp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="index_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_mlp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="index_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/index_tip_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="middle_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_plp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="middle_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_mlp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="middle_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/middle_tip_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="ring_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_plp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="ring_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_mlp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="ring_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/ring_tip_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="pinky_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_plp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="pinky_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_mlp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="pinky_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_tip_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="thumb_cmc_b_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_cmc_b_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="thumb_cmc_a_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_cmc_a_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="thumb_plp_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_plp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="thumb_mlp_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_mlp_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="thumb_tip_1" content_type="model/stl" file="./dexhand_description/meshes/right/thumb_tip_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="pinky_bulk_1" content_type="model/stl" file="./dexhand_description/meshes/right/pinky_bulk_1.stl" scale="0.001 0.001 0.001" />
-    <mesh name="hand-cover_1" content_type="model/stl" file="./dexhand_description/meshes/right/hand-cover_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="base_link" content_type="model/stl" file="assets/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+    <mesh name="forearm_1" content_type="model/stl" file="assets/meshes/forearm_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="wrist_lower_1" content_type="model/stl" file="assets/meshes/wrist_lower_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="wrist_upper_1" content_type="model/stl" file="assets/meshes/wrist_upper_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_bulk_1" content_type="model/stl" file="assets/meshes/index_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_bulk_1" content_type="model/stl" file="assets/meshes/middle_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_bulk_1" content_type="model/stl" file="assets/meshes/ring_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_knuckle_1" content_type="model/stl" file="assets/meshes/index_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_knuckle_1" content_type="model/stl" file="assets/meshes/middle_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_knuckle_1" content_type="model/stl" file="assets/meshes/ring_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_knuckle_1" content_type="model/stl" file="assets/meshes/pinky_knuckle_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_plp_1" content_type="model/stl" file="assets/meshes/index_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_mlp_1" content_type="model/stl" file="assets/meshes/index_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="index_tip_1" content_type="model/stl" file="assets/meshes/index_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_plp_1" content_type="model/stl" file="assets/meshes/middle_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_mlp_1" content_type="model/stl" file="assets/meshes/middle_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="middle_tip_1" content_type="model/stl" file="assets/meshes/middle_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_plp_1" content_type="model/stl" file="assets/meshes/ring_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_mlp_1" content_type="model/stl" file="assets/meshes/ring_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="ring_tip_1" content_type="model/stl" file="assets/meshes/ring_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_plp_1" content_type="model/stl" file="assets/meshes/pinky_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_mlp_1" content_type="model/stl" file="assets/meshes/pinky_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_tip_1" content_type="model/stl" file="assets/meshes/pinky_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_cmc_b_1" content_type="model/stl" file="assets/meshes/thumb_cmc_b_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_cmc_a_1" content_type="model/stl" file="assets/meshes/thumb_cmc_a_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_plp_1" content_type="model/stl" file="assets/meshes/thumb_plp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_mlp_1" content_type="model/stl" file="assets/meshes/thumb_mlp_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="thumb_tip_1" content_type="model/stl" file="assets/meshes/thumb_tip_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="pinky_bulk_1" content_type="model/stl" file="assets/meshes/pinky_bulk_1.stl" scale="0.001 0.001 0.001" />
+    <mesh name="hand-cover_1" content_type="model/stl" file="assets/meshes/hand-cover_1.stl" scale="0.001 0.001 0.001" />
   </asset>
 
   <worldbody>

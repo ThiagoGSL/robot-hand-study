@@ -8,7 +8,7 @@ HandLandmarkerOptions = mp.tasks.vision.HandLandmarkerOptions
 VisionRunningMode = mp.tasks.vision.RunningMode
 
 options = HandLandmarkerOptions(
-    base_options=BaseOptions(model_asset_path='dexhand-ble/Python/models/hand_landmarker.task'),
+    base_options=BaseOptions(model_asset_path='assets/models/hand_landmarker.task'),
     running_mode=VisionRunningMode.IMAGE)
 landmarker = HandLandmarker.create_from_options(options)
 
